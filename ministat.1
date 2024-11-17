@@ -23,8 +23,6 @@
 .\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 .\" SUCH DAMAGE.
 .\"
-.\" $FreeBSD$
-.\"
 .Dd November 10, 2012
 .Dt MINISTAT 1
 .Os
@@ -33,7 +31,7 @@
 .Nd statistics utility
 .Sh SYNOPSIS
 .Nm
-.Op Fl Ans
+.Op Fl Anqs
 .Op Fl C Ar column
 .Op Fl c Ar confidence_level
 .Op Fl d Ar delimiter
@@ -53,6 +51,10 @@ suppress the ASCII-art plot.
 .It Fl n
 Just report the raw statistics of the input, suppress the ASCII-art plot
 and the relative comparisons.
+.It Fl q
+Suppress printing of summary statistics and data-set names; typically for use
+alongside
+.Fl n .
 .It Fl s
 Print the average/median/stddev bars on separate lines in the ASCII-art
 plot, to avoid overlap.
@@ -68,7 +70,9 @@ See
 .Xr strtok 3
 for details.
 .It Fl w Ar width
-Width of ASCII-art plot in characters, default is 74.
+Width of ASCII-art plot in characters.
+The default is the terminal width, or 74 if standard output is not a
+terminal.
 .El
 .Pp
 A sample output could look like this:
