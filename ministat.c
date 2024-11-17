@@ -20,7 +20,6 @@
 #include <string.h>
 #include <sys/ioctl.h>
 #include <unistd.h>
-#include "queue.h"
 
 #define NSTUDENT 100
 #define NCONF 6
