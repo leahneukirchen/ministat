@@ -15,14 +15,15 @@ There should be no dependencies besides the standard libraries and a functional 
 ## Usage
 The FreeBSD man page is very relevant, pursue it [here](http://www.freebsd.org/cgi/man.cgi?ministat).
 
-	Usage: ministat [-C column] [-c confidence] [-d delimiter(s)] [-ns] [-w width] [file [file ...]]
-		confidence = {80%, 90%, 95%, 98%, 99%, 99.5%}
-		-C : column number to extract (starts and defaults to 1)
-		-d : delimiter(s) string, default to " \t"
-		-n : print summary statistics only, no graph/test
-		-q : print summary statistics and test only, no graph
-		-s : print avg/median/stddev bars on separate lines
-		-w : width of graph/test output (default 74 or terminal width)
+        Usage: ministat [-C column] [-c confidence] [-d delimiter(s)] [-Anqs] [-w width] [file [file ...]]
+                confidence = {80%, 90%, 95%, 98%, 99%, 99.5%}
+                -A : print statistics only. suppress the graph.
+                -C : column number to extract (starts and defaults to 1)
+                -d : delimiter(s) string, default to " \t"
+                -n : print summary statistics only, no graph/test
+                -q : suppress printing summary-statistics headers and data-set names
+                -s : print avg/median/stddev bars on separate lines
+                -w : width of graph/test output (default 74 or terminal width)
 
 ## Example
 From the FreeBSD [man page](http://www.freebsd.org/cgi/man.cgi?ministat)
